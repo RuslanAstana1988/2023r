@@ -64,7 +64,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/github.com/RuslanAstana1988/2023r.git && cd 2023r
+git clone https://github.com/RuslanAstana1988/2023r.git && cd 2023r
 ```
 
 ```bash
