@@ -23,10 +23,10 @@
         "url": "git+https://github.com/RuslanAstana1988/2023r.git"
     },
     "bugs": {
-        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
+        "url": "https://github.com/RuslanAstana1988/2023r/issues"
     },
     "license": "GPL-3.0-or-later",
-    "dependencies": {
+    "dependencies":{
         "@adiwajshing/baileys": "^5.0.0",
         "@bochilteam/scraper": "^3.0.0",
         "@vitalets/google-translate-api": "^8.0.0",

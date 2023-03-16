@@ -1,6 +1,6 @@
 import axios from 'axios'
 let handler = async(m, { conn, usedPrefix, command }) => {
-let cristiano = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/CristianoRonaldo.json`)).data  
+let cristiano = (await axios.get(`https://raw.githubusercontent.com/RuslanAstana1988/2023r/master/src/JSON/CristianoRonaldo.json`)).data  
 let ronaldo = await cristiano[Math.floor(cristiano.length * Math.random())]
 conn.sendButton(m.chat, "*Siiiuuuuuu*", author, ronaldo, [['⚽ SIGUIENTE ⚽', `${usedPrefix + command}`]], m)}
 handler.help = ['cristianoronaldo', 'cr7']

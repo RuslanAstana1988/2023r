@@ -1,5 +1,5 @@
 /*              Codigo Creado Por Bruno Sobrino 
-      (https://github.com/BrunoSobrino/TheMystic-Bot-MD) 
+      (https://github.com/RuslanAstana1988/2023r) 
 */
 
 let handler = async (m, { conn, args, groupMetadata, participants, usedPrefix, command, isBotAdmin, isSuperAdmin }) => {
