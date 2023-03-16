@@ -8,22 +8,22 @@ import axios from 'axios'
 import moment from 'moment-timezone' 
 
 global.owner = [
-  ['77755611654', '👑 Mystic - Creador 👑', true],
-  ['77755611654', '💫 Mystic - Collaborator 1 💫', true],
-  ['77755611654', '💫 Mystic - Collaborator 2 💫', true],
-  ['77755611654', '💫 Mystic - Collaborator 3 💫', true],
-  ['77755611654', '💫 Mystic - Collaborator 4 💫', true],
-  ['77755611654', '💫 Mystic - Collaborator 5 💫', true],
-  ['77755611654', '💫 Mystic - Collaborator 6 💫', true],  
-  ['77755611654', '💫 Mystic - Collaborator 7 💫', true],	
-  ['77755611654'],
-  ['77755611654'],
-  ['77755611654'],	
-  ['77755611654']
+  ['77789008940', '👑 Mystic - Creador 👑', true],
+  ['77789008940', '💫 Mystic - Collaborator 1 💫', true],
+  ['77789008940', '💫 Mystic - Collaborator 2 💫', true],
+  ['77789008940', '💫 Mystic - Collaborator 3 💫', true],
+  ['77789008940', '💫 Mystic - Collaborator 4 💫', true],
+  ['77789008940', '💫 Mystic - Collaborator 5 💫', true],
+  ['77789008940', '💫 Mystic - Collaborator 6 💫', true],  
+  ['77789008940', '💫 Mystic - Collaborator 7 💫', true],	
+  ['77789008940'],
+  ['77789008940'],
+  ['77789008940'],	
+  ['77789008940']
 ] 
 
-global.suittag = ['77755611654'] 
-global.prems = ['77755611654'] 
+global.suittag = ['77789008940'] 
+global.prems = ['77789008940'] 
 
 global.packname = '(☞ﾟ∀ﾟ)☞'
 global.author = '★𝚃𝚑𝚎 ПИЗДЮК - 𝙱𝚘𝚝★'
@@ -438,7 +438,7 @@ global.mysticbot = 'https://github.com/RuslanAstana1988/2023r'
 global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
-global.nomorown = '77755611654'
+global.nomorown = '77789008940'
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf']
 global.cmenut = '❖––––––『'
 global.cmenub = '┊✦ '
