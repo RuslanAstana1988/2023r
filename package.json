@@ -14,13 +14,13 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+    "homepage": "https://https://github.com/RuslanAstana1988/2023r",
     "author": {
-        "name": "BrunoSobrino"
+        "name": "RuslanAstana1988"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
+        "url": "git+https://github.com/RuslanAstana1988/2023r.git"
     },
     "bugs": {
         "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
