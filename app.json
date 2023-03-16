@@ -1,5 +1,5 @@
 {
-  "name": "TheMystic-Bot-MD",
+  "name": "RuslanAstana1988",
   "website": "https://github.com/BrunoSobrino",
   "description": "Subscribete a The Shadow Borkers - Bot (≧▽≦)",
   "repository": "https://github.com/BrunoSobrino/Mystic-termux",
@@ -22,7 +22,7 @@
     "whatsapp-md",
     "themysticbot",
     "themystic-bot",
-    "themystic-bot-md"],
+    "RuslanAstana1988"],
   "image": "heroku/nodejs",
   "buildpacks": [
     {
