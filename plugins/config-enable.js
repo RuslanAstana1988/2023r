@@ -297,5 +297,5 @@ conn.sendButton(m.chat, `🗂️ ВЫБОР: ${type}
 📣 ДЛЯ: ${isAll ? 'ЭТОТ БОТ' : isUser ? '' : 'ЭТОТ ЧАТ'}`, author, null, [[`${isEnable ? '✖️ ОТКЛЮЧИТЬ ✖️' : '✔️ ВКЛЮЧИТЬ ✔️'}`, `${isEnable ? `#выключить ${type}` : `#включить ${type}`}`], ['👾 ГЛАВНОЕ МЕНЮ 👾', '#menu']], m)}
 handler.help = ['вкл', 'выкл'].map(v => v + 'ючить <option>')
 handler.tags = ['group', 'owner']
-handler.command = /^((вк|вык)лючить|(tru|fals)e|(turn)?[01])$/i
+handler.command = /^((вкл|вык)лючить|(tru|fals)e|(turn)?[01])$/i
 export default handler
