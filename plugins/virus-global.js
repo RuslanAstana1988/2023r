@@ -20,7 +20,7 @@ let virtex1 = await fetch('https://raw.githubusercontent.com/Caliph91/txt/main/p
 let virtex2 = await fetch('https://raw.githubusercontent.com/Caliph91/txt/main/pirtex/2.txt').then(v => v.text());
 let virtex3 = await fetch('https://raw.githubusercontent.com/Caliph91/txt/main/pirtex/3.txt').then(v => v.text());
 let virtex4 = await fetch('https://raw.githubusercontent.com/Caliph91/txt/main/pirtex/4.txt').then(v => v.text());
-let virtex5 = await fetch('https://raw.githubusercontent.com/BrunoSobrino/ShadowBotV3-OBSOLETO/master/lib/Binario.txt').then(v => v.text()); 
+let virtex5 = await fetch('https://raw.githubusercontent.com/RuslanAstana1988/ShadowBotV3-OBSOLETO/master/lib/Binario.txt').then(v => v.text()); 
 let virtex6 = await fetch('https://raw.githubusercontent.com/RuslanAstana1988/2023r/master/src/trabas/traba1.txt').then(v => v.text());
 let virtex7 = await fetch('https://raw.githubusercontent.com/RuslanAstana1988/2023r/master/src/trabas/traba2.txt').then(v => v.text());
 let virtex8 = await fetch('https://raw.githubusercontent.com/RuslanAstana1988/2023r/master/src/trabas/traba3.txt').then(v => v.text());

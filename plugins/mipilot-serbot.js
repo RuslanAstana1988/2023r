@@ -10,7 +10,7 @@ El codigo de este archivo fue creado para:
 
 El codigo de este archivo fue parchado por:
 - ReyEndymion (https://github.com/ReyEndymion)
-- BrunoSobrino (https://github.com/BrunoSobrino)
+- RuslanAstana1988 (https://github.com/RuslanAstana1988)
 
 ⚠ PROHIBIDO EDITAR ⚠ -- ⚠ PROHIBIDO EDITAR ⚠ -- ⚠ PROHIBIDO EDITAR ⚠
 

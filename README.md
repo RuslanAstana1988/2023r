@@ -1,12 +1,12 @@
-# `🧿 𝚃𝚑𝚎 ПИЗДЮК - 𝙱𝚘𝚝 🔮`
+# `🧿𝚃𝚑𝚎 ПИЗДЮК-𝙱𝚘𝚝🔮`
 
 ### `—◉ 👑 DUDAS SOBRE EL BOT?, CONTACTANOS 👑`
 <a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/BRUNO_SOBRINO_CREADOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/34642467703" target="blank"><img src="https://img.shields.io/badge/UNPTOADHIH15_COLAB.1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/UNPTOADHIH15_COLAB.1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/ALBERTO_ACOSTA_COLAB.2-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/595986460945" target="blank"><img src="https://img.shields.io/badge/AIDEN_NOTLOGIC_COLAB.3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/GATITO_COLAB.4-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/593991398786" target="blank"><img src="https://img.shields.io/badge/CARLOSTWT_COLAB.5-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/CARLOSTWT_COLAB.5-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/GHOST_COLAB.6-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/NEKOSMICMATT_COLAB.7-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/77789008940" target="blank"><img src="https://img.shields.io/badge/DIEGO_COLAB.8-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
@@ -39,15 +39,15 @@
   
 ### `—◉ 💥 ACTIVAR EN KOYEB 💥`
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/BrunoSobrino/Mystic-termux&branch=master&name=mysticbot)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=https://github.com/RuslanAstana1988/Mystic-termux&branch=master&name=mysticbot)
   
 ### `—◉ 🌌 ACTIVAR EN REPLIT 🌌`
 
-[![Run on Repl.it](https://repl.it/badge/github/BrunoSobrino/Mystic-termux)](https://repl.it/github/BrunoSobrino/Mystic-termux)  
+[![Run on Repl.it](https://repl.it/badge/github/RuslanAstana1988/Mystic-termux)](https://repl.it/github/RuslanAstana1988/Mystic-termux)  
 
 ### `—◉ ⚙️ AJUSTES ⚙️`
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/BrunoSobrino/Mystic-termux/fork)
-- CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/BrunoSobrino/Mystic-termux/blob/master/config.js)
+- CLONAR EL REPOSITORIO [Aqui](https://github.com/RuslanAstana1988/Mystic-termux/fork)
+- CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/RuslanAstana1988/Mystic-termux/blob/master/config.js)
 
 ### `—◉ 👾 ACTIVAR EN TERMUX 👾` 
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
@@ -106,7 +106,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```
 
 ### `—◉ 🔥 ACTIVAR EN BOXMINEHOST 🔥`
-<a href="https://boxmineworld.com"><img src="https://raw.githubusercontent.com/BrunoSobrino/Mystic-termux/master/src/Pre%20Bot%20Publi.png" width="450" height="240" alt="JPG"/></a>
+<a href="https://boxmineworld.com"><img src="https://raw.githubusercontent.com/RuslanAstana1988/Mystic-termux/master/src/Pre%20Bot%20Publi.png" width="450" height="240" alt="JPG"/></a>
 - Pagina Oficial: [https://boxmineworld.com](https://boxmineworld.com)
 - Dashboard: [https://dash.boxmineworld.com](https://dash.boxmineworld.com)
 - Panel: [https://panel.boxmineworld.com](https://panel.boxmineworld.com)
@@ -144,6 +144,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/adiwajshing/Baileys"><img src="https://github.com/adiwajshing.png" width="150" height="150" alt="adiwajshing"/></a>
 
 ## `EDITOR & PORPIETARIO DEL BOT` 
-<a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="250" height="250" alt="BrunoSobrino"/></a>
+<a href="https://github.com/RuslanAstana1988"><img src="https://github.com/RuslanAstana1988.png" width="250" height="250" alt="RuslanAstana1988"/></a>
   
 `RuslanAstana1988 - By Bruno Sobrino`

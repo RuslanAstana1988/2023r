@@ -29,7 +29,7 @@ if (isUrl(m.text)) stiker = await createSticker(false, args[0], '', author, 20)
 else return
 }
 if (stiker) {
-let img = await(await fetch('https://github.com/BrunoSobrino.png')).buffer()  
+let img = await(await fetch('https://github.com/RuslanAstana1988.png')).buffer()  
 await this.sendFile(m.chat, stiker, 'error.jpg', null, m, false, { contextInfo: { showAdAttribution: true }})  
 //await this.sendFile(m.chat, stiker, 'error.jpg', null, m, false, { contextInfo: { mentionedJid: [m.sender], externalAdReply: { showAdAttribution: true, mediaType: 'VIDEO', mediaUrl: null, title: '𝙲𝚄𝙴𝙽𝚃𝙰𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂', body: '𝙱𝚈 @𝐵𝑟𝑢𝑛𝑜𝑆𝑜𝑏𝑟𝑖𝑛𝑜', thumbnail: img, sourceUrl: `https://www.atom.bio/theshadowbrokers-team`}}})  
 }}
