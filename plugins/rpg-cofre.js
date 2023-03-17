@@ -43,7 +43,7 @@ global.db.data.users[m.sender].lastcofre = new Date * 1
 }
 handler.help = ['daily']
 handler.tags = ['xp']
-handler.command = ['coffer', 'cofre', 'abrircofre', 'cofreabrir'] 
+handler.command = ['coffer', 'cofre', 'открытьcofre', 'cofreоткрыть'] 
 handler.level = 5
 export default handler
 

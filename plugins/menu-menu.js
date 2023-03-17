@@ -209,7 +209,7 @@ ${readMore}
 ┣ ඬ⃟ 💎 _${usedPrefix}kick2 *<@tag>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}listanum *<texto>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}kicknum *<texto>*_
-┣ ඬ⃟ 💎 _${usedPrefix}grupo *<abrir / cerrar>*_
+┣ ඬ⃟ 💎 _${usedPrefix}grupo *<открыть / закрывать>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}групповое время *<opcion> <tiempo>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}promote *<@tag>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}demote *<@tag>*_
