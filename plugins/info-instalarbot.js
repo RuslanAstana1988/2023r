@@ -21,7 +21,7 @@ let texto = `
 > cd && termux-setup-storage
 > apt-get update -y && apt-get upgrade -y
 > pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn 
-> git clone https://github.com/RuslanAstana1988/Mystic-termux.git && cd Mystic-termux 
+> git clone https://github.com/RuslanAstana1988/2023r.git && cd 2023r 
 > yarn install 
 > npm install
 > npm update
