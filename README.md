@@ -32,7 +32,7 @@
 - PAGINA USADA PARA LA LETRA [Aqui](https://smiley.cool/es/weirdmaker.php)
 
 ### `—◉ 💡 EXPERIMENTA CON UNA IA PARA NUEVOS COMANDOS 💡`
-- PAGINA [Aqui](https://beta.openai.com/playground)
+- PAGINA [Aqui](https://beta.открытьai.com/playground)
 
 ### `—◉ 💕 PLUGINS 💕`
 - TIENES IDEAS DE PLUGINS O QUIERES OBTENER MAS PLUGINS? DA CLICK EN [https://github.com/theh2so4/Mystic-Plugins](https://github.com/theh2so4/Mystic-Plugins)
@@ -47,7 +47,7 @@
 
 ### `—◉ ⚙️ AJUSTES ⚙️`
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/RuslanAstana1988/2023r/fork)
-- CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/RuslanAstana1988/2023r/blob/master/config.js)
+- CAMBIAR номер DEL OWNER [Aqui](https://github.com/RuslanAstana1988/2023r/blob/master/config.js)
 
 ### `—◉ 👾 ACTIVAR EN TERMUX 👾` 
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:

@@ -81,15 +81,15 @@ except ImportError:
     ET = None
 
 try:
-    from urllib2 import (urlopen, Request, HTTPError, URLError,
+    from urllib2 import (urlоткрыть, Request, HTTPError, URLError,
                          AbstractHTTPHandler, ProxyHandler,
                          HTTPDefaultErrorHandler, HTTPRedirectHandler,
-                         HTTPErrorProcessor, OpenerDirector)
+                         HTTPErrorProcessor, открытьerDirector)
 except ImportError:
-    from urllib.request import (urlopen, Request, HTTPError, URLError,
+    from urllib.request import (urlоткрыть, Request, HTTPError, URLError,
                                 AbstractHTTPHandler, ProxyHandler,
                                 HTTPDefaultErrorHandler, HTTPRedirectHandler,
-                                HTTPErrorProcessor, OpenerDirector)
+                                HTTPErrorProcessor, открытьerDirector)
 
 try:
     from httplib import HTTPConnection, BadStatusLine
@@ -406,7 +406,7 @@ def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
         except socket.error:
             err = get_exception()
             if sock is not None:
-                sock.close()
+                sock.закрыть()
 
     if err is not None:
         raise err
@@ -519,7 +519,7 @@ def _build_connection(connection, source_address, timeout, context=None):
     """Cross Python 2.4 - Python 3 callable to build an ``HTTPConnection`` or
     ``HTTPSConnection`` with the args we need
 
-    Called from ``http(s)_open`` methods of ``SpeedtestHTTPHandler`` or
+    Called from ``http(s)_открыть`` methods of ``SpeedtestHTTPHandler`` or
     ``SpeedtestHTTPSHandler``
     """
     def inner(host, **kwargs):
@@ -542,8 +542,8 @@ class SpeedtestHTTPHandler(AbstractHTTPHandler):
         self.source_address = source_address
         self.timeout = timeout
 
-    def http_open(self, req):
-        return self.do_open(
+    def http_открыть(self, req):
+        return self.do_открыть(
             _build_connection(
                 SpeedtestHTTPConnection,
                 self.source_address,
@@ -566,8 +566,8 @@ class SpeedtestHTTPSHandler(AbstractHTTPHandler):
         self.source_address = source_address
         self.timeout = timeout
 
-    def https_open(self, req):
-        return self.do_open(
+    def https_открыть(self, req):
+        return self.do_открыть(
             _build_connection(
                 SpeedtestHTTPSConnection,
                 self.source_address,
@@ -580,9 +580,9 @@ class SpeedtestHTTPSHandler(AbstractHTTPHandler):
     https_request = AbstractHTTPHandler.do_request_
 
 
-def build_opener(source_address=None, timeout=10):
-    """Function similar to ``urllib2.build_opener`` that will build
-    an ``OpenerDirector`` with the explicit handlers we want,
+def build_открытьer(source_address=None, timeout=10):
+    """Function similar to ``urllib2.build_открытьer`` that will build
+    an ``открытьerDirector`` with the explicit handlers we want,
     ``source_address`` for binding, ``timeout`` and our custom
     `User-Agent`
     """
@@ -607,13 +607,13 @@ def build_opener(source_address=None, timeout=10):
         HTTPErrorProcessor()
     ]
 
-    opener = OpenerDirector()
-    opener.addheaders = [('User-agent', build_user_agent())]
+    открытьer = открытьerDirector()
+    открытьer.addheaders = [('User-agent', build_user_agent())]
 
     for handler in handlers:
-        opener.add_handler(handler)
+        открытьer.add_handler(handler)
 
-    return opener
+    return открытьer
 
 
 class GzipDecodedResponse(GZIP_BASE):
@@ -639,11 +639,11 @@ class GzipDecodedResponse(GZIP_BASE):
         self.io.seek(0)
         gzip.GzipFile.__init__(self, mode='rb', fileobj=self.io)
 
-    def close(self):
+    def закрыть(self):
         try:
-            gzip.GzipFile.close(self)
+            gzip.GzipFile.закрыть(self)
         finally:
-            self.io.close()
+            self.io.закрыть()
 
 
 def get_exception():
@@ -724,19 +724,19 @@ def build_request(url, data=None, headers=None, bump='0', secure=False):
     return Request(final_url, data=data, headers=headers)
 
 
-def catch_request(request, opener=None):
+def catch_request(request, открытьer=None):
     """Helper function to catch common exceptions encountered when
     establishing a connection with a HTTP/HTTPS request
 
     """
 
-    if opener:
-        _open = opener.open
+    if открытьer:
+        _открыть = открытьer.открыть
     else:
-        _open = urlopen
+        _открыть = urlоткрыть
 
     try:
-        uh = _open(request)
+        uh = _открыть(request)
         if request.get_full_url() != uh.geturl():
             printer('Redirected to %s' % uh.geturl(), debug=True)
         return uh, False
@@ -795,7 +795,7 @@ def do_nothing(*args, **kwargs):
 class HTTPDownloader(threading.Thread):
     """Thread class for retrieving a URL"""
 
-    def __init__(self, i, request, start, timeout, opener=None,
+    def __init__(self, i, request, start, timeout, открытьer=None,
                  shutdown_event=None):
         threading.Thread.__init__(self)
         self.request = request
@@ -803,10 +803,10 @@ class HTTPDownloader(threading.Thread):
         self.starttime = start
         self.timeout = timeout
         self.i = i
-        if opener:
-            self._opener = opener.open
+        if открытьer:
+            self._открытьer = открытьer.открыть
         else:
-            self._opener = urlopen
+            self._открытьer = urlоткрыть
 
         if shutdown_event:
             self._shutdown_event = shutdown_event
@@ -816,14 +816,14 @@ class HTTPDownloader(threading.Thread):
     def run(self):
         try:
             if (timeit.default_timer() - self.starttime) <= self.timeout:
-                f = self._opener(self.request)
+                f = self._открытьer(self.request)
                 while (not event_is_set(self._shutdown_event) and
                         (timeit.default_timer() - self.starttime) <=
                         self.timeout):
                     self.result.append(len(f.read(10240)))
                     if self.result[-1] == 0:
                         break
-                f.close()
+                f.закрыть()
         except IOError:
             pass
         except HTTP_ERRORS:
@@ -887,7 +887,7 @@ class HTTPUploaderData(object):
 class HTTPUploader(threading.Thread):
     """Thread class for putting a URL"""
 
-    def __init__(self, i, request, start, size, timeout, opener=None,
+    def __init__(self, i, request, start, size, timeout, открытьer=None,
                  shutdown_event=None):
         threading.Thread.__init__(self)
         self.request = request
@@ -897,10 +897,10 @@ class HTTPUploader(threading.Thread):
         self.timeout = timeout
         self.i = i
 
-        if opener:
-            self._opener = opener.open
+        if открытьer:
+            self._открытьer = открытьer.открыть
         else:
-            self._opener = urlopen
+            self._открытьer = urlоткрыть
 
         if shutdown_event:
             self._shutdown_event = shutdown_event
@@ -913,16 +913,16 @@ class HTTPUploader(threading.Thread):
             if ((timeit.default_timer() - self.starttime) <= self.timeout and
                     not event_is_set(self._shutdown_event)):
                 try:
-                    f = self._opener(request)
+                    f = self._открытьer(request)
                 except TypeError:
                     # PY24 expects a string or buffer
                     # This also causes issues with Ctrl-C, but we will concede
                     # for the moment that Ctrl-C on PY24 isn't immediate
                     request = build_request(self.request.get_full_url(),
                                             data=request.data.read(self.size))
-                    f = self._opener(request)
+                    f = self._открытьer(request)
                 f.read(11)
-                f.close()
+                f.закрыть()
                 self.result = sum(self.request.data.total)
             else:
                 self.result = 0
@@ -946,7 +946,7 @@ class SpeedtestResults(object):
     """
 
     def __init__(self, download=0, upload=0, ping=0, server=None, client=None,
-                 opener=None, secure=False):
+                 открытьer=None, secure=False):
         self.download = download
         self.upload = upload
         self.ping = ping
@@ -961,10 +961,10 @@ class SpeedtestResults(object):
         self.bytes_received = 0
         self.bytes_sent = 0
 
-        if opener:
-            self._opener = opener
+        if открытьer:
+            self._открытьer = открытьer
         else:
-            self._opener = build_opener()
+            self._открытьer = build_открытьer()
 
         self._secure = secure
 
@@ -1010,13 +1010,13 @@ class SpeedtestResults(object):
         request = build_request('://www.speedtest.net/api/api.php',
                                 data='&'.join(api_data).encode(),
                                 headers=headers, secure=self._secure)
-        f, e = catch_request(request, opener=self._opener)
+        f, e = catch_request(request, открытьer=self._открытьer)
         if e:
             raise ShareResultsConnectFailure(e)
 
         response = f.read()
         code = f.code
-        f.close()
+        f.закрыть()
 
         if int(code) != 200:
             raise ShareResultsSubmitFailure('Could not submit results to '
@@ -1092,7 +1092,7 @@ class Speedtest(object):
 
         self._source_address = source_address
         self._timeout = timeout
-        self._opener = build_opener(source_address, timeout)
+        self._открытьer = build_открытьer(source_address, timeout)
 
         self._secure = secure
 
@@ -1106,12 +1106,12 @@ class Speedtest(object):
             self.config.update(config)
 
         self.servers = {}
-        self.closest = []
+        self.закрытьst = []
         self._best = {}
 
         self.results = SpeedtestResults(
             client=self.config['client'],
-            opener=self._opener,
+            открытьer=self._открытьer,
             secure=secure,
         )
 
@@ -1131,7 +1131,7 @@ class Speedtest(object):
             headers['Accept-Encoding'] = 'gzip'
         request = build_request('://www.speedtest.net/speedtest-config.php',
                                 headers=headers, secure=self._secure)
-        uh, e = catch_request(request, opener=self._opener)
+        uh, e = catch_request(request, открытьer=self._открытьer)
         if e:
             raise ConfigRetrievalError(e)
         configxml_list = []
@@ -1145,8 +1145,8 @@ class Speedtest(object):
                 raise ConfigRetrievalError(get_exception())
             if len(configxml_list[-1]) == 0:
                 break
-        stream.close()
-        uh.close()
+        stream.закрыть()
+        uh.закрыть()
 
         if int(uh.code) != 200:
             return None
@@ -1278,7 +1278,7 @@ class Speedtest(object):
                     headers=headers,
                     secure=self._secure
                 )
-                uh, e = catch_request(request, opener=self._opener)
+                uh, e = catch_request(request, открытьer=self._открытьer)
                 if e:
                     errors.append('%s' % e)
                     raise ServersRetrievalError()
@@ -1294,8 +1294,8 @@ class Speedtest(object):
                     if len(serversxml_list[-1]) == 0:
                         break
 
-                stream.close()
-                uh.close()
+                stream.закрыть()
+                uh.закрыть()
 
                 if int(uh.code) != 200:
                     raise ServersRetrievalError()
@@ -1377,20 +1377,20 @@ class Speedtest(object):
             url = server
 
         request = build_request(url)
-        uh, e = catch_request(request, opener=self._opener)
+        uh, e = catch_request(request, открытьer=self._открытьer)
         if e:
             raise SpeedtestMiniConnectFailure('Failed to connect to %s' %
                                               server)
         else:
             text = uh.read()
-            uh.close()
+            uh.закрыть()
 
         extension = re.findall('upload_?[Ee]xtension: "([^"]+)"',
                                text.decode())
         if not extension:
             for ext in ['php', 'asp', 'aspx', 'jsp']:
                 try:
-                    f = self._opener.open(
+                    f = self._открытьer.открыть(
                         '%s/speedtest/upload.%s' % (url, ext)
                     )
                 except Exception:
@@ -1417,8 +1417,8 @@ class Speedtest(object):
 
         return self.servers
 
-    def get_closest_servers(self, limit=5):
-        """Limit servers to the closest speedtest.net servers based on
+    def get_закрытьst_servers(self, limit=5):
+        """Limit servers to the закрытьst speedtest.net servers based on
         geographic distance
         """
 
@@ -1427,15 +1427,15 @@ class Speedtest(object):
 
         for d in sorted(self.servers.keys()):
             for s in self.servers[d]:
-                self.closest.append(s)
-                if len(self.closest) == limit:
+                self.закрытьst.append(s)
+                if len(self.закрытьst) == limit:
                     break
             else:
                 continue
             break
 
-        printer('Closest Servers:\n%r' % self.closest, debug=True)
-        return self.closest
+        printer('закрытьst Servers:\n%r' % self.закрытьst, debug=True)
+        return self.закрытьst
 
     def get_best_server(self, servers=None):
         """Perform a speedtest.net "ping" to determine which speedtest.net
@@ -1443,9 +1443,9 @@ class Speedtest(object):
         """
 
         if not servers:
-            if not self.closest:
-                servers = self.get_closest_servers()
-            servers = self.closest
+            if not self.закрытьst:
+                servers = self.get_закрытьst_servers()
+            servers = self.закрытьst
 
         if self._source_address:
             source_address_tuple = (self._source_address, 0)
@@ -1493,7 +1493,7 @@ class Speedtest(object):
                     cum.append(total)
                 else:
                     cum.append(3600)
-                h.close()
+                h.закрыть()
 
             avg = round((sum(cum) / 6) * 1000.0, 3)
             results[avg] = server
@@ -1543,7 +1543,7 @@ class Speedtest(object):
                     request,
                     start,
                     self.config['length']['download'],
-                    opener=self._opener,
+                    открытьer=self._открытьer,
                     shutdown_event=self._shutdown_event
                 )
                 while in_flight['threads'] >= max_threads:
@@ -1637,7 +1637,7 @@ class Speedtest(object):
                     start,
                     request[1],
                     self.config['length']['upload'],
-                    opener=self._opener,
+                    открытьer=self._открытьer,
                     shutdown_event=self._shutdown_event
                 )
                 while in_flight['threads'] >= max_threads:

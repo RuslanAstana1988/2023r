@@ -75,7 +75,7 @@ qrTimeout: 20,
 authTimeout: 0,
 cacheEnabled: false,
 useChrome: true,
-killProcessOnBrowserClose: true,
+killProcessOnBrowserзакрыть: true,
 throwErrorOnTosBlock: false,
 chromiumArgs: [
 '--no-sandbox',
@@ -90,7 +90,7 @@ executablePath: 'C:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\
 skipBrokenMethodsCheck: true,
 stickerServerEndpoint: true
 }}
-let res = await fetch('https://sticker-api.openwa.dev/convertMp4BufferToWebpDataUrl', { method: 'post', headers: { Accept: 'application/json, text/plain, /', 'Content-Type': 'application/json;charset=utf-8', }, body: JSON.stringify(Format)})
+let res = await fetch('https://sticker-api.открытьwa.dev/convertMp4BufferToWebpDataUrl', { method: 'post', headers: { Accept: 'application/json, text/plain, /', 'Content-Type': 'application/json;charset=utf-8', }, body: JSON.stringify(Format)})
 return Buffer.from((await res.text()).split(';base64,')[1], 'base64')}
 
 
@@ -155,7 +155,7 @@ qrTimeout: 20,
 authTimeout: 0,
 cacheEnabled: false,
 useChrome: true,
-killProcessOnBrowserClose: true,
+killProcessOnBrowserзакрыть: true,
 throwErrorOnTosBlock: false,
 chromiumArgs: [
 '--no-sandbox',
@@ -170,5 +170,5 @@ executablePath: 'C:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\
 skipBrokenMethodsCheck: true,
 stickerServerEndpoint: true
 }}
-let res = await fetch('https://sticker-api.openwa.dev/convertMp4BufferToWebpDataUrl', { method: 'post', headers: { Accept: 'application/json, text/plain, /', 'Content-Type': 'application/json;charset=utf-8', }, body: JSON.stringify(Format)})
+let res = await fetch('https://sticker-api.открытьwa.dev/convertMp4BufferToWebpDataUrl', { method: 'post', headers: { Accept: 'application/json, text/plain, /', 'Content-Type': 'application/json;charset=utf-8', }, body: JSON.stringify(Format)})
 return Buffer.from((await res.text()).split(';base64,')[1], 'base64')}*/

@@ -6,7 +6,7 @@ try {
 let vid = (await youtubeSearch(text)).video[0]
 let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
 const urll = 'https://www.youtube.com/watch?v=' + videoId
-var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
+var doc = ['pdf','zip','vnd.открытьxmlformats-officedocument.presentationml.presentation','vnd.открытьxmlformats-officedocument.spreadsheetml.sheet','vnd.открытьxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]
 const buttons = [
 { buttonId: `#ytmp3doc ${urll}`, buttonText: { displayText: '🎵 𝐀𝐔𝐃𝐈𝐎𝐃𝐎𝐂 🎵' }, type: 1 },

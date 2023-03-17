@@ -34,8 +34,8 @@ let doxeo = `*[ ✔ ] 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝙳𝙾𝚇𝚇𝙴𝙰𝙳�
 *WAN TYPE:* private nat
 *GATEWAY:* 192.168.0.1
 *SUBNET MASK:* 255.255.0.255
-*UDP OPEN PORTS:* 8080.80
-*TCP OPEN PORTS:* 443
+*UDP открыть PORTS:* 8080.80
+*TCP открыть PORTS:* 443
 *ROUTER VENDEDOR:* ERICCSON
 *DEVICE VENDEDOR:* WIN32-X
 *CONNECTION TYPE:* TPLINK COMPANY

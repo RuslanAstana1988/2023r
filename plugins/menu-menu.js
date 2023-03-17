@@ -210,7 +210,7 @@ ${readMore}
 ┣ ඬ⃟ 💎 _${usedPrefix}listanum *<texto>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}kicknum *<texto>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}grupo *<abrir / cerrar>*_
-┣ ඬ⃟ 💎 _${usedPrefix}grouptime *<opcion> <tiempo>*_
+┣ ඬ⃟ 💎 _${usedPrefix}групповое время *<opcion> <tiempo>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}promote *<@tag>*_
 ┣ ඬ⃟ 💎 _${usedPrefix}demote *<@tag>*_
 ┣ ඬ⃟ 💎 _admins *<texto>*_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)

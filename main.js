@@ -145,9 +145,9 @@ if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('🚩ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
 }
-if (connection == 'open') {
+if (connection == 'открыть') {
 console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ ПОДКЛЮЧЁН К ЦаПУ ✅\n│\n▣──────────────────────────────···'))}
-if (connection == 'close') {
+if (connection == 'закрыть') {
 console.log(chalk.yellow(`🚩ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`))}
 }
 
@@ -164,7 +164,7 @@ console.error(e)
 }
 if (restatConn) {
 const oldChats = global.conn.chats
-try { global.conn.ws.close() } catch { }
+try { global.conn.ws.закрыть() } catch { }
 conn.ev.removeAllListeners()
 global.conn = makeWASocket(connectionOptions, { chats: oldChats })
 isInit = true
@@ -260,7 +260,7 @@ spawn('find', ['--version'])
 ].map(p => {
 return Promise.race([
 new Promise(resolve => {
-p.on('close', code => {
+p.on('закрыть', code => {
 resolve(code !== 127)
 })}),
 new Promise(resolve => {
@@ -271,12 +271,12 @@ let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, fin
 Object.freeze(global.support)
 }
 setInterval(async () => {
-if (stopped == 'close') return
+if (stopped == 'закрыть') return
 var a = await clearTmp()        
 console.log(chalk.cyanBright(`\n▣───────────[ АВТООТЧИСКА ]──────────────···\n│\n▣─❧ ФАЙЛЫ УДАЛЕНЫ ✅\n│\n▣───────────────────────────────────────···\n`))
 }, 180000)
 setInterval(async () => {
-if (stopped == 'close') return        
+if (stopped == 'закрыть') return        
 const status = global.db.data.settings[conn.user.jid] || {}
 let _uptime = process.uptime() * 1000    
 let uptime = clockString(_uptime)

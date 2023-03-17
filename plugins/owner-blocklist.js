@@ -9,7 +9,7 @@ txt += "└───────────"
 return conn.reply(m.chat, txt, m, { mentions: await conn.parseMention(txt) })
 }).catch(err => {
 console.log(err);
-throw 'No hay números bloqueados'})}
+throw 'No hay номерs bloqueados'})}
 handler.help = ['blocklist']
 handler.tags = ['main']
 handler.command = ['blocklist', 'listblock'] 

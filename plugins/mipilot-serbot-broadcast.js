@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix, text }) => {
     if (conn.user.jid !== global.conn.user.jid) throw false
-    let users = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user.jid)])]
+    let users = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'закрыть').map(conn => conn.user.jid)])]
     let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
     let teks = text ? text : cc.text
     let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 DIFUSION A SUB BOTS 〕*\n\n' + teks)

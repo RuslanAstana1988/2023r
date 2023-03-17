@@ -2,7 +2,7 @@ import axios from "axios"
 let handler = async (m, { args }) => {
 if (!args[0]) throw "*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚂𝙲𝚁𝙸𝙱𝙰 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝚂𝚄 𝙿𝙰𝙸𝚂 𝙾 𝙲𝙸𝚄𝙳𝙰𝙳*"
 try {
-const response = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273`)
+const response = axios.get(`https://api.открытьweathermap.org/data/2.5/weather?q=${args}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273`)
 const res = await response
 const name = res.data.name
 const Country = res.data.sys.country
